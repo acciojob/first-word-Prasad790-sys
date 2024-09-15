@@ -1,14 +1,11 @@
 function firstWord(s) {
   // your code here
-	let ct=0;
-	for(c of s){
-		ct++;
-		if(c===''& ct===0) return '';
-		else if(c===' ') return s.slice(0,ct);
-	}
+  for (let index = 0; index < s.length; index++) {
+  	if(s.charAt(index)===' '){return s.slice(0,index+1);}
+  }
 	return s;
 }
 
-// Do not change the code be
+// Do not change the co
 const s = prompt("Enter String:");
 alert(firstWord(s));
